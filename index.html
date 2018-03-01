@@ -34,27 +34,22 @@
       <div class="col-12 col-md-6 offset-md-3">
         
         <div id="step1" class="stepDiv" style="display: none;">
-          <h3>Step 1: Household</h3>
-          <table id="step1Table" class="serif">
-            <tr>
-              <td>How many people live in your household?</td>
-              <td><input id="numHousehold" type="number" min="1" value="1" class="inp-wth aln-rt"></td>
-            </tr>
-            <tr>
-              <td>Do you live with a senior (60 or older) or a person with disabilities?</td>
-              <td>
-                <input type="radio" name="withSenior" id="yesSenior"><label for="yesSenior">Yes</label><br> 
-                <input type="radio" name="withSenior" id="noSenior" checked="checked"><label for="noSenior">No</label>
-              </td>
-            </tr>
-          </table>
-          <p class="aln-ctr pt1"><button onclick="moveStep2()">Next</button></p>
+          <h2 class="tac">Household</h2>
+          <p>How many people live in your household?
+            <span><input id="numHousehold" type="text" class="inp-mrg inp-wth aln-rt" value="1"></span>
+          </p>
+          <p>Do you live with a <strong>senior</strong> (60 or older) or a <strong>person with disabilities</strong>?
+            <span><input type="radio" name="withSenior" id="yesSenior"><label for="yesSenior">Yes</label>
+                  <input type="radio" name="withSenior" id="noSenior" checked="checked"><label for="noSenior">No</label>
+            </span>
+          </p>
+          <p class="nav"><button id="nextStep1">Next</button></p>
         </div>
       
         <div id="step2" class="stepDiv" style="display: none;">
-          <h3>Step 2: Monthly Earned Income</h3>
-          <p class="serif">List all gross monthly earned income. Don't list excluded income.</p>
-            <table id="step2Table" class="serif">
+          <h2 class="tac">Gross Monthly Earned Income</h2>
+          <p>List all <strong>gross monthly earned income</strong>. Don't list <strong>excluded income</strong>.</p>
+            <table style="margin-left: 1em" id="step2Table">
               <tr><td>Wages:</td>
                   <td><input id="earnedIncWages" type="number" min="0" class="inp-wth aln-rt earnedInc" value="0"></td></tr>
               <tr><td>Training allowance:</td>
@@ -77,9 +72,9 @@
         </div>
       
         <div id="step3" class="stepDiv" style="display: none;">
-          <h3>Step 3: Monthly Unearned Income</h3>
-          <p class="serif">List all monthly unearned income. Don't list excluded income.</p>
-            <table id="step3Table" class="serif">
+          <h2 class="tac">Monthly Unearned Income</h2>
+          <p>List all <strong>monthly unearned income</strong>. Don't list <strong>excluded income</strong>.</p>
+            <table style="margin-left: 1em" id="step3Table">
               <tr><td>Public benefits (Reach Up, SSI, SSD, VA, etc.):</td>
                   <td><input type="number" min="0" class="inp-wth aln-rt unearnedInc" value="0"></td></tr>
               <tr><td>Net rental income (if property managed by 3rd party):</td>
