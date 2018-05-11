@@ -377,7 +377,13 @@ function calcTotalShelterCosts() {
     $("#shelterDeduc").text(shelterDeduc);
     var monthlyNetInc = Math.max(0, adjustedIncome - shelterDeduc);
     $("#monthlyNetInc").text(monthlyNetInc);
-    $("#benefitAllot").text(calcBenefitAllotment(monthlyNetInc));
+    if(calcBenefitAllotment(monthlyNetInc) > 0) {
+    	$("#benefitAllot").text(calcBenefitAllotment(monthlyNetInc));
+    } else {
+    	$("#allotment-no").removeClass('visuallyhidden');
+    	$("#allotment-yes").addClass('visuallyhidden');
+    }
+    
     result = true;
   }
   catch (err) {
